@@ -32,7 +32,4 @@ ENV TG_API=""
 EXPOSE 5000
 
 # 启动 Flask + Bot
-
-
-CMD ["python", "-u", "/app/app.py", "-token", "$TOKEN", "-group_id", "$GROUP_ID", "-language", "$LANGUAGE", "-tg_api", "$TG_API"]
-
+CMD python -u /app/app.py -token "$TOKEN" -group_id "$GROUP_ID" -language "$LANGUAGE" -tg_api "$TG_API"
