@@ -6,7 +6,7 @@ ADD locale /app/locale
 RUN find /app/locale -name "*.po" -type f -delete
 ADD db_migrate /app/db_migrate
 ADD requirements.txt /app
-ADD app.py /app   # 新增
+ADD app.py /app   
 
 RUN mkdir /app/data
 RUN pip install --no-cache-dir -r requirements.txt
@@ -17,6 +17,6 @@ ENV GROUP_ID="-1002664447385"
 ENV LANGUAGE="zh_CN"
 ENV TG_API=""
 
-EXPOSE 5000  # Render 健康检查端口
+EXPOSE 5000
 
 CMD ["python", "app.py"]
